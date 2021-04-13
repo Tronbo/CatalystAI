@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CatalystAI</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Krona+One&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/demo.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="{{ url_for('home') }}"><img class="logo" src="https://media.discordapp.net/attachments/797624154748223538/800812480229539900/catalystAI_3.png" alt=""></a>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#learn">Learn</a>
+                <a href="{{ url_for('demo') }}">Demo</a>
+                <a href="#learn">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+<div class="banner-area">
+    <h2>Typing Yesterday. Automated Today.</h2>
+</div>
+<div class="content-area">
+    <div class="wrapper">
+        <h2>Type in your hypothesis into the textbox with a couple key words and experimental results for a more thorough, informative, and easy to understand output</h2>
+        <div class="container">
+            <form method="POST">
+                <textarea name="text" cols="40" rows="15" class="text"></textarea>
+                <input class="btn draw-border" type="submit"/>
+            </form>
+            <h3 class="output" style="position:absolute">{{ output }}</h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Krona+One&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css')}}">
+    <link rel="stylesheet" href="./static/css/home.css">
+</head>
+<body>
+<div class="box-area">
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="./home.html"><img class="logo" src="https://media.discordapp.net/attachments/797624154748223538/800812480229539900/catalystAI_3.png" alt=""></a>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#learn">Learn</a>
+                <a href="{{ url_for('demo') }}">Demo</a>
+                <a href="#learn">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <div class="banner-area">
+        <h2>Meet CatalystAI.</h2>
+        <a href="learn" class="button">Learn</a>
+        <a href="./demo.html" class="button">Demo</a>
+    </div>
+    <div class="content-area">
+        <div class="wrapper">
+            <section id="about">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>Why CatalystAI?</h2>
+                <p><i>Research papers, essays, written project proposals.</i> These are just some of the works that modern day individuals create whether it's for a business, new project idea, etc. CatalystAI seeks to prioritize <strong>the step forward in AI text-generation</strong>. Thanks to OpenAI, our team was able to utilize GPT-3 as well as an extensively constructed knowledge graph to develop a text-generation oriented AI program that allows users & clients to generate fully written essays when simply given the paper of topic, as well as some key words and phrases.</p>
+                <p class="short"><strong>AI REWRITES THE RULES OF TEXT GENERATION</strong></p>
+                <p>Automated text generation is becoming increasingly common. From robot journalism to product descriptions, their use has become more and more ubiquitous. As demand continues to grow for individual online content, automated text generation is to become increasingly important. <b>CatalystAI</b> aims to develop and promote the latest text-generation artificial intelligence through an GPT-3 AI project, designed to automate personalized essays with only inputs as key words, phrases, and topics. </p>
+            </section>
+            <section id="learn">
+                <div class="container">
+                    <div class="card">
+                        <img src="https://media.discordapp.net/attachments/756994165690073243/800473716651065354/Neural-Architecture-Optimization.png" class="card__image">
+                        <p class="card__name">[Data/Graph Data]</p>
+
+                        <a href="learn"><button class="btn draw-border">Learn</button></a>
+
+                    </div>
+                    <div class="card">
+                        <img src="https://media.discordapp.net/attachments/756994165690073243/800477138574508053/2019-11-07-image-15.jpg?width=929&height=563" class="card__image">
+                        <p class="card__name">Use the demo</p>
+                        <a href="{{ url_for('demo') }}"><button class="btn draw-border">Demo</button></a>
+                    </div>
+                    <div class="card">
+                        <img src="https://media.discordapp.net/attachments/756994165690073243/800478101950693406/GitHub-logo.png?width=563&height=508" class="card__image">
+                        <p class="card__name">Github Repository</p>
+
+                        <p>Link: [Insert Link]</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
