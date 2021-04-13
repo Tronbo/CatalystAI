@@ -27,15 +27,15 @@ app = Flask(__name__)
 
 nlp = spacy.load('en_core_web_sm')
 
-set_openai_key("sk-MXAmsogskTEQLCKH80Mx3rbqsQyTsJxFnHlOfy1h")
+set_openai_key("sk-UyQWGS9Xv98y1KTigm58N60ucASCQ4IsTNf9X59q")
 
 candidate_sentences = pd.read_csv("data.csv")
 print(candidate_sentences.shape)
 
 # Construct GPT object and show some examples
 gpt = GPT(engine="davinci",
-            temperature=0.7,
-            max_tokens=300)
+            temperature=0.6,
+            max_tokens=1000)
 
 gpt.add_example(Example('Harmonization/domain-invariance schemes results are undesirable. The accuracy of the output predictions cannot be accurately predicted.',
                             'We show that for a wide class of harmonization/domain-invariance schemes several undesirable properties are unavoidable. If a predictive machine is made invariant to a set of domains, the accuracy of the output predictions (as measured by mutual information) is limited by the domain with the least amount of information to begin with. If a real label value is highly informative about the source domain, it cannot be accurately predicted by an invariant predictor. These results are simple and intuitive, but we believe that it is beneficial to state them for medical imaging harmonization.'))
